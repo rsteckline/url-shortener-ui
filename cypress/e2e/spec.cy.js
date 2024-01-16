@@ -5,7 +5,7 @@ describe("URL Shortener", () => {
     }).as("getUrls");
   });
 
-  it("should display the main page with heading, form, and all urls", () => {
+  it("should display the main page with heading, form, and all urls - ITERATION 3 - BULLETPOINT 1 of 3", () => {
     cy.visit("http://localhost:3000/");
     cy.wait("@getUrls");
 
@@ -31,12 +31,12 @@ describe("URL Shortener", () => {
         cy.get("a").should("contain", "http://localhost:3001/useshorturl/2");
         cy.get("p").should(
           "contain",
-          "https://website.com/bird"
+          "https://websitewebsitewebsitewebsitewebsite.com/bird"
         );
       });
   });
 
-  it("should have a form that takes input values", () => {
+  it("should have a form that takes input values - ITERATION 3 - BULLETPOINT 2 of 3", () => {
     cy.visit("http://localhost:3000/");
     cy.wait("@getUrls");
 
@@ -53,7 +53,7 @@ describe("URL Shortener", () => {
     );
   });
 
-  it("should add a new url and verify the button's text and functionality", () => {
+  it("should add a new url and verify the button's text and functionality - ITERATION 3 - BULLETPOINT 3 of 3", () => {
     cy.visit("http://localhost:3000/");
     cy.wait("@getUrls");
 
@@ -87,7 +87,7 @@ describe("URL Shortener", () => {
       .should("contain", "https://reallywildlycrazydumblongurl.com");
   });
 
-  it("should display the correct number of URLs and verify the first and last URLs", () => {
+  it("should display the correct number of URLs and verify the first and last URLs - ", () => {
     cy.visit("http://localhost:3000/");
     cy.wait("@getUrls");
 
@@ -102,7 +102,7 @@ describe("URL Shortener", () => {
         cy.get(".url").last().within(() => {
           cy.get("h3").should("contain", "Bird");
           cy.get("a").should("contain", "http://localhost:3001/useshorturl/2");
-          cy.get("p").should("contain", "https://website.com/bird");
+          cy.get("p").should("contain", "https://websitewebsitewebsitewebsitewebsite.com/bird");
         });
     });
 

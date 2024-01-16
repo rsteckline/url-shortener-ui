@@ -8,7 +8,7 @@
     },
     {
       "id": 2,
-      "long_url": "https://media.audubon.org/2022-09/stay_abreast_bird.png",
+      "long_url": "https://website.com/bird",
       "short_url": "http://localhost:3001/useshorturl/2",
       "title": "Bird"
     }

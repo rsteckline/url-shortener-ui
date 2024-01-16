@@ -31,7 +31,7 @@ describe("URL Shortener", () => {
         cy.get("a").should("contain", "http://localhost:3001/useshorturl/2");
         cy.get("p").should(
           "contain",
-          "https://media.audubon.org/2022-09/stay_abreast_bird.png"
+          "https://website.com/bird"
         );
       });
   });
@@ -102,7 +102,7 @@ describe("URL Shortener", () => {
         cy.get(".url").last().within(() => {
           cy.get("h3").should("contain", "Bird");
           cy.get("a").should("contain", "http://localhost:3001/useshorturl/2");
-          cy.get("p").should("contain", "https://media.audubon.org/2022-09/stay_abreast_bird.png");
+          cy.get("p").should("contain", "https://website.com/bird");
         });
     });
 

@@ -26,4 +26,14 @@ describe("URL Shortener", () => {
     });
   });
 
+  it("should have a form that takes input values", () => {
+    cy.visit("http://localhost:3000/");
+    cy.wait("@getUrls");
+
+    cy.get('input[name="title"]').type("Dog");
+    cy.get('input[name="urlToShorten"]').type("https://ireallylovedogstheyrethebest.com");
+    cy.get('input[name="title"]').should("have.value", "Dog");
+    cy.get('input[name="urlToShorten"]').should("have.value", "https://ireallylovedogstheyrethebest.com");
+  });  
+
 });
